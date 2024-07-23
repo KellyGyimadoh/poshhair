@@ -1,0 +1,301 @@
+/* General reset for box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(248, 234, 242);
+  overflow-x: hidden; /* Ensure no horizontal scrolling */
+  padding-top: 56px;
+  margin: 0 auto; /* Reset margin to eliminate any unexpected gaps */
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  border-radius: 10px;
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: #da7db0;
+  border-radius: 10px;
+  color: black;
+}
+
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 575.98px) {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body {
+    box-sizing: border-box;
+  }
+  .circleimgs {
+    background-color: #f0efed;
+    padding: 5px 0; /* Adjust padding as needed */
+  }
+
+  .circleimgs .col-4 {
+    margin: 5px !important; /* Adjust margin between images */
+    text-align: center; /* Center align images and text */
+  }
+
+  .circleimgs img {
+    height: 50px !important; /* Adjust image height */
+    width: 50px !important; /* Ensure images are square */
+    object-fit: cover !important; /* Maintain aspect ratio */
+    border-radius: 50% !important; /* Rounded shape */
+    border: 2px solid #fff !important; /* Optional: Add border for better visibility */
+  }
+}
+
+.circleimgs {
+  background-color: #f0efed;
+  padding: 10px 0; /* Adjust padding as needed */
+}
+
+.circleimgs .col-4 {
+  margin: 20px !important; /* Adjust margin between images */
+  text-align: center; /* Center align images and text */
+}
+
+.circleimgs img {
+  height: 150px !important; /* Adjust image height */
+  width: 150px !important; /* Ensure images are square */
+  object-fit: cover !important; /* Maintain aspect ratio */
+  border-radius: 50% !important; /* Rounded shape */
+  border: 2px solid #fff !important; /* Optional: Add border for better visibility */
+}
+
+@media (max-width: 768px) {
+  .circleimgs .col-4 {
+    margin: 5px; /* Adjust margin for smaller screens */
+  }
+}
+
+#frontpic {
+  margin-top: -5px;
+}
+
+.wig-text {
+  text-decoration: solid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300px;
+  font-size: 25px;
+}
+
+.price-text {
+  font-weight: 300px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.navbar {
+  background-color: aliceblue;
+  margin-left: 0; /* Remove left margin */
+  margin-right: 0; /* Remove right margin */
+  height: 50px !important;
+  z-index: 2;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.wigpics {
+  background-color: rgb(243, 235, 239);
+}
+
+.wigpic-container {
+  padding: 0px 10px;
+}
+
+.wigpics .card {
+  height: 100%;
+}
+
+.navbar-brand {
+  margin-left: 0; /* Adjust brand position */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Push nav links to the right */
+}
+
+.navbar-collapse {
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.brand {
+  width: 100px;
+  height: 50px;
+}
+
+
+
+
+
+.navbar-toggler {
+  margin-top: -13px;
+}
+
+/* Ensure carousel fills its parent (#frontpic) */
+.thefoot {
+  text-align: center;
+}
+
+.footercontainer {
+  background-color: rgb(5, 5, 5);
+  padding-top: 20px;
+  margin-bottom: -20px;
+}
+
+.thefoot > li {
+  border-bottom: 0px;
+  border-top: 0px;
+  background-color: rgb(5, 5, 5);
+  color: antiquewhite;
+}
+
+/* Ensure carousel images fill the carousel */
+.carousel-item img {
+  width: 100%;
+  /*height:400px;*/
+  max-height: 100%;
+  width: 100%;
+}
+
+.footerflex {
+  color: #c21373;
+  margin-left: 10px;
+}
+
+.wigpics img,
+video {
+  height: 400px;
+}
+
+.wigpics .pt-2 {
+  margin-left: 0px !important;
+  padding: 0px !important;
+}
+
+.quickinfo {
+  color: #f0efed;
+  height: 50px !important;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  #navformsearch {
+    width: 500px !important; /* Increase width of search bar on medium screens */
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    justify-content: space-between; /* Adjust alignment for smaller screens */
+    background-color: #b99ead;
+    color: rgb(182, 28, 123);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding: 0;
+    margin-top: -8px;
+    opacity: 0.6;
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  .navbar-collapse:hover {
+    opacity: 1.0;
+  }
+  .navbar {
+    background-image: linear-gradient(rgb(247, 238, 242), #f0efed);
+  }
+  .navbar-brand {
+    margin-top: -14px; /* Adjust brand position */
+    height: fit-content;
+  }
+  .brand {
+    float: right;
+    width: 100px;
+    height: 50px;
+    margin-left: 0px;
+  }
+  .quickinfo {
+    padding-bottom: 50px;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    padding-right: 0px;
+    padding-left: 0%;
+    margin-left: 6px;
+    margin-right: 5px;
+  
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container-fluid,.row {
+   
+    overflow:hidden;
+    padding-left: 0;
+    padding-right: 0;
+    margin:0 auto;
+
+  }
+  
+  .carousel-item img {
+    min-height: 200px;
+  }
+
+  .circleimgs .col-4 {
+    flex: 0 0 auto;
+    width: calc(100% / 3); /* Adjust for 5 items in a row */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border-radius: 100% !important;
+}
+
+.circleimgs img {
+  height: 50px !important; /* Adjust image height for small screens */
+  width: 200px !important; /* Ensure images are square */
+ 
+}
+}
+
+.training .card-title {
+  color: #c21373;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.training .card-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#aboutus img {
+  opacity: 0.3;
+  background-image: url('img/car.jpeg');
+}
+
+#aboutus {
+  opacity: 0.8;
+  background-image: url('img/car.jpeg');
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  opacity: 0.4;
+}

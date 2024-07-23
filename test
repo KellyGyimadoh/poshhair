@@ -1,0 +1,202 @@
+.navbar {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  #frontpic {
+    margin-left: -100px;
+    margin-right: -100px;
+  }
+  .thefoot{
+    text-align: center;
+  }
+
+  body{
+    background-color: rgb(207, 64, 148);
+  }
+  .navbar{
+    background-color: rgb(238, 181, 224) !important;
+  }
+  .navbar-brand {
+      margin-right: 100px; /* Push brand/logo to the left */
+      margin-left: -70px; /* Adjust brand position */
+    }
+    
+    .navbar-nav{
+      margin-left: auto; /* Push nav links to the right */
+    }
+    
+    .navbar-collapse  {
+      justify-content: flex-end; /* Align items to the right */
+    }
+    
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        justify-content: space-between; /* Adjust alignment for smaller screens */
+      }
+      .navbar {
+        margin-left: -50px;
+        margin-right: -50px;
+      }
+    }
+    
+    @media (max-width: 800px) {
+      .navbar-brand {
+        margin-left: -10px; /* Adjust brand position for smaller screens */
+      }
+    }
+    
+    #navformsearch {
+      width: 300px !important; /* Initial width of search bar */
+    }
+    
+    @media (min-width: 768px) {
+      #navformsearch {
+        width: 500px !important; /* Increase width of search bar on medium screens */
+      }
+    }
+
+    <div class="row mt-5 p-5 bg-light" id="training">
+    <div class="col-12 col-md-6">
+        <h2>Training</h2>
+        <p>
+            At Posh Hair Dock, we believe in empowering our customers with knowledge and skills. Our training
+            programs are
+            designed to provide you with the expertise needed to excel in the hair industry. Whether you're a
+            beginner or a
+            professional, we have courses tailored to your needs.
+        </p>
+        <p>
+            Our training includes wig making, hair styling, maintenance techniques, and much more. Join our
+            training
+            sessions and become a certified hair expert.
+        </p>
+    </div>
+    <div class="col-12 col-md-6">
+        <img src="img/One on one - Made with PosterMyWall (1).jpg" class="img-fluid" alt="Training">
+    </div>
+</div>
+<section id="training">
+    <div class="row">
+      <div class="card text-bg-dark">
+        <img src="img/One on one - Made with PosterMyWall (1).jpg" class="card-img" alt="training">
+        <div class="card-img-overlay">
+          <h3 class="card-title">Best training Offer</h3>
+          <p class="card-text"><button class="btn-sm btn-success">Book Now</button></p>
+         
+        </div>
+      </div>
+    </div>
+    </section>  
+
+<div class="row mt-5 p-5 bg-dark text-light" id="contact">
+    <div class="col-12 col-md-6">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-12 col-md-6">
+        <h2>Get in Touch</h2>
+        <p>Phone: +123 456 7890</p>
+        <p>Email: info@poshhairdock.com</p>
+        <p>Address: 123 Hair Street, Hair City, HC 12345</p>
+    </div>
+
+</div>
+
+<div class="container-fluid footercontainer mx-0">
+
+    <section id="contact">
+        <div class="row mt-2">
+            <div class="d-flex p-2 bd-highlight footerflex">
+                <h1>PHD</h1>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-0">
+                <ul class="list-group thefoot">
+                    <li class="list-group-item">
+                        <h3>Products</h3>
+                    </li>
+                    <li class="list-group-item">Frontal</li>
+                    <li class="list-group-item">Closure</li>
+                    <li class="list-group-item">Wig tools/Accessories</li>
+                    <li class="list-group-item">Hair Extension</li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 p-0">
+
+                <ul class="list-group thefoot">
+                    <li class="list-group-item">
+                        <h3>Social Media</h3>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone">0549216065</i></li>
+                    <li class="list-group-item"><i class="fa-brands fa-instagram">posh_hair_dock</i></li>
+                    <li class="list-group-item"><i class="fa-brands fa-tiktok">porchineryhmes1</i></li>
+                    <li class="list-group-item"><i class="fa-brands fa-snapchat">porcinepearl</i></li>
+                    <li class="list-group-item"><i class="fa-brands fa-google">porcinepearl@gmail.com</i></li>
+                </ul>
+
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 p-0">
+
+                <ul class="list-group thefoot">
+                    <li class="list-group-item">
+                        <h3>About Posh Hair Dock</h3>
+                    </li>
+                    <li class="list-group-item">Our Story</li>
+                    <li class="list-group-item">WholeSale</li>
+                    <li class="list-group-item">Brand stores</li>
+                    <li class="list-group-item">Investors</li>
+                    <li class="list-group-item">Ambassadors</li>
+                </ul>
+
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 p-0">
+
+                <ul class="list-group thefoot">
+                    <li class="list-group-item">
+                        <h3>Policies</h3>
+                    </li>
+                    <li class="list-group-item">Terms And Conditions</li>
+                    <li class="list-group-item">Privacy Policies</li>
+
+                </ul>
+
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 m-0">
+
+                <ul class="list-group thefoot">
+                    <li class="list-group-item">
+                        <h3>Training Services</h3>
+                    </li>
+                    <li class="list-group-item">One Month training</li>
+                    <li class="list-group-item">2-Weeks training</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+</div>
+
+<script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
