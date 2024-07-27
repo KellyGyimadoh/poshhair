@@ -34,40 +34,53 @@ body {
   margin-left: auto;
 }
 
-@media (max-width: 575.98px) {
-  .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  body {
-    box-sizing: border-box;
-  }
-  .circleimgs {
-    background-color: #f0efed;
-    padding: 5px 0; /* Adjust padding as needed */
-  }
-
-  .circleimgs .col-4 {
-    margin: 5px !important; /* Adjust margin between images */
-    text-align: center; /* Center align images and text */
-  }
-
-  .circleimgs img {
-    height: 50px !important; /* Adjust image height */
-    width: 50px !important; /* Ensure images are square */
-    object-fit: cover !important; /* Maintain aspect ratio */
-    border-radius: 50% !important; /* Rounded shape */
-    border: 2px solid #fff !important; /* Optional: Add border for better visibility */
-  }
+/* Styles for the front section */
+.front {
+  height: 100vh; /* Full viewport height */
+  padding: 0;
+  overflow: hidden;
+  position: relative; /* For absolute positioning of quickinfo */
 }
 
+#carouselExampleControls {
+  height: calc(100% - 50px); /* Subtract height of quickinfo */
+  overflow: hidden; /* Hide overflow to prevent unwanted scrolling */
+}
+
+.carousel-inner {
+  height: 100%; /* Ensure inner container fills the height */
+}
+
+.carousel-item {
+  height: 100%; /* Each carousel item should fill the height */
+}
+
+.carousel-item img {
+  height: 100%; /* Image should fill the carousel item */
+  width: auto; /* Adjust width automatically */
+  max-width: 100%; /* Ensure image does not overflow */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.quickinfo {
+  position: absolute; /* Absolute position to place it at the bottom */
+  bottom: 0;
+  width: 100%; /* Full width */
+  background-color: rgb(199, 111, 38); /* Background color */
+  display: flex; /* Flexbox to align items */
+  color: #fff; /* Text color */
+  font-size: 14px; /* Adjust font size */
+  z-index: 10; /* Ensure it stays above the carousel */
+}
+
+/* Circle images styles */
 .circleimgs {
   background-color: #f0efed;
-  padding: 10px 0; /* Adjust padding as needed */
+  padding:  0; /* Adjust padding as needed */
 }
 
 .circleimgs .col-4 {
-  margin: 20px !important; /* Adjust margin between images */
+  margin: 0px !important; /* Adjust margin between images */
   text-align: center; /* Center align images and text */
 }
 
@@ -79,14 +92,58 @@ body {
   border: 2px solid #fff !important; /* Optional: Add border for better visibility */
 }
 
-@media (max-width: 768px) {
-  .circleimgs .col-4 {
-    margin: 5px; /* Adjust margin for smaller screens */
-  }
+/* Navbar styles */
+.navbar {
+  background-color: aliceblue;
+  margin-left: 0; /* Remove left margin */
+  margin-right: 0; /* Remove right margin */
+  height: 50px !important;
+  z-index: 2;
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar .justify-content-end a {
+  margin-left: 10px; /* Adjust spacing between links */
+  padding-right: 10px; /* Add right padding for end spacing */
+}
+.navbar-brand {
+  margin-left: 0; /* Adjust brand position */
 }
 
-#frontpic {
-  margin-top: -5px;
+.navbar-nav {
+  margin-left: auto; /* Push nav links to the right */
+}
+
+.brand {
+  width: 100px;
+  height: 50px;
+}
+
+.navbar-toggler {
+  margin-top: -13px;
+}
+
+/* Wigpics styles */
+.wigpics {
+  background-color: rgb(243, 235, 239);
+}
+
+.wigpic-container {
+  padding: 0px 10px;
+}
+
+.wigpics .card {
+  height: 100%;
+}
+
+.wigpics img,
+video {
+  height: 400px;
+}
+
+.wigpics .pt-2 {
+  margin-left: 0px !important;
+  padding: 0px !important;
 }
 
 .wig-text {
@@ -102,54 +159,7 @@ body {
   font-size: 20px;
 }
 
-.navbar {
-  background-color: aliceblue;
-  margin-left: 0; /* Remove left margin */
-  margin-right: 0; /* Remove right margin */
-  height: 50px !important;
-  z-index: 2;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.wigpics {
-  background-color: rgb(243, 235, 239);
-}
-
-.wigpic-container {
-  padding: 0px 10px;
-}
-
-.wigpics .card {
-  height: 100%;
-}
-
-.navbar-brand {
-  margin-left: 0; /* Adjust brand position */
-}
-
-.navbar-nav {
-  margin-left: auto; /* Push nav links to the right */
-}
-
-.navbar-collapse {
-  justify-content: flex-end; /* Align items to the right */
-}
-
-.brand {
-  width: 100px;
-  height: 50px;
-}
-
-
-
-
-
-.navbar-toggler {
-  margin-top: -13px;
-}
-
-/* Ensure carousel fills its parent (#frontpic) */
+/* Footer styles */
 .thefoot {
   text-align: center;
 }
@@ -167,39 +177,171 @@ body {
   color: antiquewhite;
 }
 
-/* Ensure carousel images fill the carousel */
-.carousel-item img {
-  width: 100%;
-  /*height:400px;*/
-  max-height: 100%;
-  width: 100%;
-}
-
 .footerflex {
   color: #c21373;
   margin-left: 10px;
 }
 
-.wigpics img,
-video {
-  height: 400px;
+/* Carousel controls styles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  opacity: 0.4;
 }
 
-.wigpics .pt-2 {
-  margin-left: 0px !important;
-  padding: 0px !important;
+/* Media queries for responsive design */
+
+/* Small screens (max-width: 575.98px) */
+@media (max-width: 575.98px) {
+  .container-fluid,
+  .row {
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  .navbar, .navbar-collapse {
+    margin-left: 10px; /* Adjust spacing between links */
+    padding-right: 10px; /* Add right padding for end spacing */
+    text-align: center;
+   
+   
+  }
+  #navformsearch{
+    width: 20px !important;
+    margin-left: 20px;
+  }
+  .navbar .justify-content-end a {
+   margin-top: 20px !important;
+    align-content: center;
+    
+  }
+  #navbarSupportedContent{
+    margin-top: -7px;
+  }
+  .circleimgs .col-4 {
+    margin: 5px !important; /* Adjust margin between images */
+    text-align: center; /* Center align images and text */
+    flex: 0 0 auto;
+    width: calc(100% / 3); /* Adjust for 5 items in a row */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border-radius: 100% !important;
+  }
+
+  .circleimgs img {
+    height: 50px !important; /* Adjust image height for small screens */
+    width: 50px !important; /* Ensure images are square */
+  }
+
+  .quickinfo {
+    padding-bottom: 10px;
+   bottom:-10px;
+  }
+
+  #frontpic {
+    margin-top: -5px;
+  }
+
+  .navbar-collapse {
+    padding-right: 0px;
+    padding-left: 0%;
+    margin-left: 6px;
+    margin-right: 5px;
+  }
 }
 
-.quickinfo {
-  color: #f0efed;
-  height: 50px !important;
-  padding-top: 10px;
+/* Medium screens (min-width: 576px) */
+@media (min-width: 576px) {
+  .circleimgs .carousel-item {
+    flex-wrap: wrap;
+    position: static; /* Reset position for larger screens */
+  }
+
+  .circle-item {
+    position: relative; /* Reset position for larger screens */
+    width: auto; /* Adjust width for larger screens */
+    height: auto; /* Adjust height for larger screens */
+    margin: auto ; /* Remove overlap margin */
+    z-index: auto; /* Reset z-index */
+
+  }
+
+  .circle-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .front {
+    height: auto; /* Adjust height for larger screens */
+  }
+
+  #carouselExampleControls {
+    height: auto;
+  }
+
+  .carousel-inner {
+    height: auto;
+  }
+
+  .carousel-item {
+    height: auto;
+  }
+
+  .carousel-item img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .quickinfo {
+    position: static; /* Default position for larger screens */
+    height: 40px;
+    background-color: rgb(199, 111, 38);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+  }
+  .navbar, .navbar-collapse {
+    margin-left: 10px; /* Adjust spacing between links */
+    padding-right: 10px; /* Add right padding for end spacing */
+    text-align: center;
+   
+   
+  }
+  #navformsearch{
+    width: 20px !important;
+    margin-left: 20px;
+  }
+  .navbar .justify-content-end a {
+   margin-top: 20px !important;
+    align-content: center;
+    
+  }
+  #navbarSupportedContent{
+    margin-top: -7px;
+  }
 }
+
+/* Medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .circleimgs .col-4 {
+    margin: 5px; /* Adjust margin for smaller screens */
+  }
+}
+
+/* Medium screens (min-width: 768px) */
 @media (min-width: 768px) {
   #navformsearch {
     width: 500px !important; /* Increase width of search bar on medium screens */
   }
 }
+
+/* Large screens (max-width: 991.98px) */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     justify-content: space-between; /* Adjust alignment for smaller screens */
@@ -213,67 +355,30 @@ video {
     margin-right: -16px;
     margin-left: -16px;
   }
+  
   .navbar-collapse:hover {
     opacity: 1.0;
   }
+  
   .navbar {
     background-image: linear-gradient(rgb(247, 238, 242), #f0efed);
   }
+  
   .navbar-brand {
     margin-top: -14px; /* Adjust brand position */
     height: fit-content;
   }
+  
   .brand {
     float: right;
     width: 100px;
     height: 50px;
     margin-left: 0px;
   }
-  .quickinfo {
-    padding-bottom: 50px;
-  }
-}
-
-
-@media (max-width: 767.98px) {
-  .navbar-collapse {
-    padding-right: 0px;
-    padding-left: 0%;
-    margin-left: 6px;
-    margin-right: 5px;
-  
-  }
-}
-
-@media (max-width: 575.98px) {
-  .container-fluid,.row {
-   
-    overflow:hidden;
-    padding-left: 0;
-    padding-right: 0;
-    margin:0 auto;
-
-  }
-  
-  .carousel-item img {
-    min-height: 200px;
-  }
-
-  .circleimgs .col-4 {
-    flex: 0 0 auto;
-    width: calc(100% / 3); /* Adjust for 5 items in a row */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    border-radius: 100% !important;
-}
-
-.circleimgs img {
-  height: 50px !important; /* Adjust image height for small screens */
-  width: 200px !important; /* Ensure images are square */
  
 }
-}
 
+/* Responsive layout adjustments */
 .training .card-title {
   color: #c21373;
   text-align: center;
@@ -292,10 +397,4 @@ video {
 #aboutus {
   opacity: 0.8;
   background-image: url('img/car.jpeg');
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black;
-  opacity: 0.4;
 }
